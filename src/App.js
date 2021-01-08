@@ -1,8 +1,19 @@
+import React from 'react';
+// libraries
+
+// components
+import Navbar from './components/navbar.js';
+import Header from './components/header.js';
+import Featured from './components/featured.js';
+import Footer from './components/footer.js';
 
 function App() {
   return (
     <div className="App">
-      <h1>Sample</h1>
+      <Navbar />
+      <Header />
+      <Featured />
+      <Footer />
     </div>
   );
 }
