@@ -1,0 +1,39 @@
+// featured
+.featured{
+    height: auto;   
+    @include flexCenter(column);
+
+    #{&}__container{
+        @include flexCenter(column);
+        margin: 1.5rem 0;
+    }
+
+    #{&}__hair,
+    #{&}__beauty-permanent,
+    #{&}__eyebrows,
+    #{&}__nailcare,
+    #{&}__waxing{
+        @include flexCenter(column);
+        margin-top: 1.5rem;
+    }
+
+    #{&}__main-title{
+        font-family: getFont(title-nav);
+        margin-top: 2rem;
+    }
+    #{&}__sub-title{
+        font-family: getFont(description);
+        font-weight: bold;
+    }
+    #{&}__main-title,
+    #{&}__sub-title{
+        font-size: getFontSize(h-desc);
+    }
+
+    #{&}__box{
+        width: 16.5625rem;
+        height: 9.375rem;
+        background: #f5e6e6;
+        border-radius: 2.5rem;
+    }
+};

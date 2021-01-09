@@ -98,6 +98,7 @@ body .moving-nav {
 }
 
 .featured {
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,7 +115,7 @@ body .moving-nav {
           align-items: center;
 }
 
-.footer {
+.featured .featured__container {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,5 +130,85 @@ body .moving-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 1.5rem 0;
+}
+
+.featured .featured__hair,
+.featured .featured__beauty-permanent,
+.featured .featured__eyebrows,
+.featured .featured__nailcare,
+.featured .featured__waxing {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.5rem;
+}
+
+.featured .featured__main-title {
+  font-family: "Audiowide", cursive;
+  margin-top: 2rem;
+}
+
+.featured .featured__sub-title {
+  font-family: "Caveat", cursive;
+  font-weight: bold;
+}
+
+.featured .featured__main-title,
+.featured .featured__sub-title {
+  font-size: 25px;
+}
+
+.featured .featured__box {
+  width: 16.5625rem;
+  height: 9.375rem;
+  background: #f5e6e6;
+  border-radius: 2.5rem;
+}
+
+.footer .footer__container {
+  margin: 1.5rem 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .footer__title {
+  font-family: "Audiowide", cursive;
+  font-size: 25px;
+  text-align: center;
+}
+
+.footer .footer__copyright {
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+  text-align: center;
+}
+
+.footer .footer__logo {
+  width: 110px;
+  margin: 1rem 0;
 }
 /*# sourceMappingURL=style.css.map */

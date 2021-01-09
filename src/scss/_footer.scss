@@ -1,4 +1,26 @@
 // footer
 .footer{
-    @include flexCenter(column);
-};
+
+    #{&}__container{
+        margin: 1.5rem 0;
+        @include flexCenter(column);
+    }
+
+    #{&}__title{
+        font-family: getFont(title-nav);
+        font-size: getFontSize(h-desc);
+        text-align: center;
+    }
+
+    #{&}__copyright{
+        font-family: getFont(description);
+        font-size: getFontSize(footer);
+        text-align: center;
+    }
+    
+    #{&}__logo{
+       width: 110px;
+       margin: 1rem 0;
+    }
+
+}; 
