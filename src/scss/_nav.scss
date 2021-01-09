@@ -1,0 +1,31 @@
+/* navbar */
+.navbar{
+    position: fixed;
+    right: 0;
+    z-index: 1;
+    font-family: getFont(title-nav);
+    padding-top: .7rem;
+  
+    ul{
+      padding: getPadding(g-padding);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: getFontSize(nav);
+      li{
+        margin: 0 .5rem;
+      }
+    }
+    #nav-lines{
+      margin: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    #nav-circle{
+      position: absolute;
+      left: -10px;
+      z-index: 0;
+      top: -15px;
+    }
+  }

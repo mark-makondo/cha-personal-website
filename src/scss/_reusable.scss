@@ -1,0 +1,55 @@
+ /* descriptions // font-family: 'Caveat', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+/* nav/title // font-family: 'Audiowide', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+// css variables
+$fonts: (
+  "title-nav": ('Audiowide', cursive),
+  "description": ('Caveat', cursive)
+);
+$font-size: (
+  "nav": 15px,
+  "header-desc": 25px,
+  "h-desc":  25px,
+  "f-desc": 10px,        
+  "footer": 20px
+);
+$bg-colors: (
+  "primary-color": #F5E6E6,
+  "secondary-color": #F8EDED
+);
+$font-colors: (
+  "primary-color": #707070,
+  "secondary-color": #070404
+);
+$padding: (
+  "g-padding" : 1rem
+);
+
+// functions
+@function getFont($target){
+    @return map-get($fonts, $target)
+};
+@function getFontSize($target){
+    @return map-get($font-size, $target)
+};
+@function getBgColor($target){
+    @return map-get($bg-colors, $target)
+};
+@function getFontColor($target){
+    @return map-get($font-colors, $target)
+};
+@function getPadding($target){
+    @return map-get($padding, $target)
+};
+
+// reusable css
+@mixin flexCenter($direction){
+    position: relative;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+};
+  

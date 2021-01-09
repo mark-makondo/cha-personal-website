@@ -1,0 +1,12 @@
+// header
+.header{
+  @include flexCenter(column);
+  height: 100vh;
+
+  p{
+    margin-top: 1rem;
+    font-family: getFont(description);
+    font-size: getFontSize(h-desc);
+    text-indent: 10px;
+  }
+};
