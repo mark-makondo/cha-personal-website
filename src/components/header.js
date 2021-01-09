@@ -4,7 +4,7 @@ const header = () => {
 
     return(
         <div className="header">
-            
+            this is a header
         </div>
     )
 }
