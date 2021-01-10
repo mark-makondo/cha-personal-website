@@ -15,7 +15,7 @@ body{
   .header,
   .featured,
   .footer{
-    padding: map-get($padding, g-padding );
+    padding: getPadding(g-padding)
   }
   .featured,
   .moving-nav{

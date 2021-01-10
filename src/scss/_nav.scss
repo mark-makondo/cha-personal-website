@@ -11,21 +11,42 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
+      align-items: flex-start;
       font-size: getFontSize(nav);
       li{
         margin: 0 .5rem;
       }
     }
-    #nav-lines{
+
+    #{&}__container{
+      position: relative;
+    }
+
+    #{&}__contents{
+      position: absolute;
+      top: 0;
+      left: -6rem;
+      margin-top: .1rem;
+    }
+
+    #{&}__li-hr{
+      margin-top: .235rem;
+    }
+
+    #{&}__lines{
       margin: 1.5rem;
       position: relative;
       z-index: 1;
     }
-    #nav-circle{
+
+    #{&}__circle{
       position: absolute;
-      left: -10px;
+      left: -5px;
       z-index: 0;
-      top: -15px;
+      top: -50px;
+    }
+
+    #{&}__logo{
+      display: none;
     }
   }

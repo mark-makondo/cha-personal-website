@@ -1,19 +1,36 @@
  /* descriptions // font-family: 'Caveat', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
-/* nav/title // font-family: 'Audiowide', cursive; */
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+/* nav/title // font-family: 'Itim', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
 
 // css variables
 $fonts: (
-  "title-nav": ('Audiowide', cursive),
+  "title-nav": ('Itim', cursive),
   "description": ('Caveat', cursive)
 );
 $font-size: (
-  "nav": 15px,
-  "header-desc": 25px,
-  "h-desc":  25px,
-  "f-desc": 10px,        
-  "footer": 20px
+  // nav
+  "nav": 18px,
+  "nav-ws": 20px,
+  // header
+  "header-description":  30px,
+  "header-description-ws":  40px,
+  // featured
+  "main-title": 40px,
+  "sub-title": 30px,
+  "main-title-ws": 55px,
+  "sub-title-ws": 40px,
+  "featured-description-ws": 30px,
+  // footer        
+  "footer": 40px,
+  "footer-copyright": 20px,
+  "footer-icon": 48px,
+  "footer-ws": 55px,
+  "footer-copyright-ws": 30px,
+  "footer-icon-ws": 48px
+ 
+
 );
 $bg-colors: (
   "primary-color": #F5E6E6,
@@ -24,8 +41,10 @@ $font-colors: (
   "secondary-color": #070404
 );
 $padding: (
-  "g-padding" : 1rem
+  "g-padding" : 0 2rem
 );
+
+$g-max-width: 80rem;
 
 // functions
 @function getFont($target){
@@ -52,4 +71,23 @@ $padding: (
     justify-content: center;
     align-items: center;
 };
+@mixin web-max-width(){
+  max-width: $g-max-width;
+}
   
+// responsive css
+@mixin media-md{
+  @media screen and (min-width: 768px){
+    @content;
+  }
+};
+@mixin media-lg{
+  @media screen and (min-width: 1024px){
+    @content;
+  }
+};
+@mixin media-xl{
+  @media screen and (min-width: 1600px){
+    @content;
+  }
+};

@@ -1,0 +1,133 @@
+// responsive medium screen
+@include media-md{
+    /* navbar */
+    .navbar{
+        right: unset;
+        width: 100%;
+
+        ul{
+        @include flexCenter(row);
+
+        font-size: getFontSize(nav-ws);
+            li{
+                margin: 0 .5rem;
+            }
+        }
+
+        #{&}__contents{
+            @include flexCenter(row);
+            position: unset;
+            left: unset;
+            width: 100%;
+        }
+
+        // show logo
+        #{&}__logo{
+            display: unset;
+            width: 10rem;
+            justify-content: flex-start;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-top: 0.9375rem;
+        }
+
+        // remove mobile only icons
+        #{&}__lines,
+        #{&}__circle{
+            display: none;
+        }
+    }
+
+    // header
+    .header{
+        p{
+            font-size: getFontSize(header-description-ws);
+        }
+    };
+  
+    // featured
+    .featured{
+        height: auto;   
+        
+        @include flexCenter(column);
+
+        #{&}__container{
+            @include flexCenter(column);
+        }
+
+        #{&}__hair,
+        #{&}__beauty-permanent,
+        #{&}__eyebrows,
+        #{&}__nailcare,
+        #{&}__waxing{
+            @include flexCenter(row);
+        }
+
+        #{&}__main-title{
+            font-size: getFontSize(main-title-ws);
+        }
+
+        #{&}__info{
+            @include flexCenter(column);
+            align-items: flex-start;
+            width: 50%;
+
+            span{
+                font-size: getFontSize(sub-title-ws);
+            }
+            p{
+                display: unset;
+                font-size: getFontSize(featured-description-ws)
+            }
+        }
+
+        #{&}__box{
+            width: 50%;
+            height: 20rem;
+        }
+
+        div.featured--selector div:nth-child(even){
+            .featured__box{
+                order: 2;
+            }
+            .featured__info{
+                order: 1;
+            }
+        }
+    };
+
+    // footer
+    .footer{
+        #{&}__container{
+            @include flexCenter(column);
+        }
+
+        #{&}__title{
+            font-size: getFontSize(footer-ws);
+        }
+        
+        #{&}__logo{
+            width: 10rem;;
+        }
+
+        #{&}__copyright{
+            font-size: getFontSize(footer-copyright-ws);
+        }
+    }; 
+
+}
+
+// responsive large screen
+@include media-lg{
+  
+}
+
+// responsive x-large screen
+@include media-xl{
+    .navbar{
+
+        #{&}__container{
+            padding: 0 5rem;
+        }
+    }
+}

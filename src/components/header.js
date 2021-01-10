@@ -7,7 +7,10 @@ const header = () => {
 
     return(
         <div className="header">
-           <ChaBeautyLogo fill="#707070"/> 
+            <div className="header__logo">
+                <ChaBeautyLogo fill="#707070" width="100%"/> 
+            </div>
+         
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et dolor enim necessitatibus recusandae. Voluptates beatae, facilis dignissimos nam amet nostrum, dolorem quas reiciendis iure magnam, accusamus debitis voluptatum quam et.
             </p>

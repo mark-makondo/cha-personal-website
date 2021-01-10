@@ -2,25 +2,41 @@
 .footer{
 
     #{&}__container{
-        margin: 1.5rem 0;
         @include flexCenter(column);
+        @include web-max-width();
+
+        padding: 2rem 0;
+        margin: auto;
     }
 
     #{&}__title{
         font-family: getFont(title-nav);
-        font-size: getFontSize(h-desc);
-        text-align: center;
-    }
-
-    #{&}__copyright{
-        font-family: getFont(description);
         font-size: getFontSize(footer);
         text-align: center;
     }
-    
+
     #{&}__logo{
-       width: 110px;
-       margin: 1rem 0;
+        width: 10rem;
+        margin: 1rem 0;
+     }
+ 
+
+    #{&}__contact{
+        @include flexCenter(row);
+        font-size: getFontSize(footer-icon);
+
+        i{
+            color: getFontColor(primary-color); 
+            margin: 0 .5rem;
+        }
+       
     }
 
+    #{&}__copyright{
+        font-family: getFont(title-nav);
+        font-size: getFontSize(footer-copyright);
+        text-align: center;
+        margin-top: 1rem;
+    }
+ 
 }; 

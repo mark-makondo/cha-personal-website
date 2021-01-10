@@ -13,7 +13,8 @@ const footer = () => {
                     <ChaBeautyLogo fill="#707070" width="100%"/> 
                 </div> 
                 <div className="footer__contact">
-
+                    <a href="https://www.facebook.com/chaartistbeauty"><i className="fab fa-facebook"></i></a>
+                    <a href="https://github.com/mark-makondo/"><i class="fab fa-instagram"></i></a>
                 </div>
                 <span className="footer__copyright">Copyright &#x24B8; Chanda Makondo</span>
             </div>

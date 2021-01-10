@@ -3,10 +3,16 @@
   @include flexCenter(column);
   height: 100vh;
 
+  #{&}__logo{
+    max-width: 25rem;
+  }
+
   p{
+    @include web-max-width();
+    
     margin-top: 1rem;
     font-family: getFont(description);
-    font-size: getFontSize(h-desc);
+    font-size: getFontSize(header-description);
     text-indent: 10px;
   }
 };
