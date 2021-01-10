@@ -36,11 +36,10 @@ body .moving-nav {
   right: 0;
   z-index: 1;
   font-family: "Itim", cursive;
-  padding-top: .7rem;
+  padding-top: 1rem;
 }
 
 .navbar ul {
-  padding: 0 2rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,38 +55,51 @@ body .moving-nav {
 }
 
 .navbar ul li {
-  margin: 0 .5rem;
+  margin: .125rem 0;
 }
 
 .navbar .navbar__container {
   position: relative;
+  width: 10rem;
 }
 
 .navbar .navbar__contents {
   position: absolute;
+  right: 1rem;
   top: 0;
-  left: -6rem;
-  margin-top: .1rem;
 }
 
 .navbar .navbar__li-hr {
   margin-top: .235rem;
+  border-top: 2px solid;
+  visibility: hidden;
+  width: 0;
 }
 
 .navbar .navbar__lines {
-  margin: 1.5rem;
-  position: relative;
+  position: absolute;
+  right: 1.25rem;
+  top: 0;
   z-index: 1;
 }
 
 .navbar .navbar__circle {
   position: absolute;
-  left: -5px;
+  right: -1rem;
+  top: -2rem;
   z-index: 0;
-  top: -50px;
 }
 
 .navbar .navbar__logo {
+  display: none;
+}
+
+.navbar .navbar__li-hr {
+  visibility: hidden;
+  width: 0;
+}
+
+.navbar .navbar__contents {
   display: none;
 }
 
@@ -114,7 +126,7 @@ body .moving-nav {
 }
 
 .header p {
-  max-width: 80rem;
+  max-width: 38rem;
   margin-top: 1rem;
   font-family: "Caveat", cursive;
   font-size: 30px;
@@ -154,7 +166,7 @@ body .moving-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 80rem;
+  max-width: 38rem;
   margin-bottom: 2rem;
   width: 100%;
 }
@@ -226,7 +238,7 @@ body .moving-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 80rem;
+  max-width: 38rem;
   padding: 5rem 0;
   margin: auto;
 }
@@ -317,6 +329,10 @@ body .moving-nav {
     left: unset;
     width: 100%;
   }
+  .navbar .navbar__container {
+    padding: 0 2rem;
+    width: unset;
+  }
   .navbar .navbar__logo {
     display: unset;
     width: 10rem;
@@ -332,6 +348,7 @@ body .moving-nav {
     display: none;
   }
   .header p {
+    max-width: 80rem;
     font-size: 40px;
   }
   .featured {
@@ -366,6 +383,7 @@ body .moving-nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    max-width: 80rem;
   }
   .featured .featured__hair,
   .featured .featured__beauty-permanent,
@@ -446,6 +464,7 @@ body .moving-nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    max-width: 80rem;
   }
   .footer .footer__title {
     font-size: 55px;

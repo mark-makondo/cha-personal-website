@@ -21,6 +21,11 @@
             width: 100%;
         }
 
+        #{&}__container{
+            padding: getPadding(g-padding);
+            width: unset;
+        }
+
         // show logo
         #{&}__logo{
             display: unset;
@@ -41,6 +46,7 @@
     // header
     .header{
         p{
+            @include web-max-width-ws();
             font-size: getFontSize(header-description-ws);
         }
     };
@@ -53,6 +59,7 @@
 
         #{&}__container{
             @include flexCenter(column);
+            @include web-max-width-ws();
         }
 
         #{&}__hair,
@@ -100,6 +107,7 @@
     .footer{
         #{&}__container{
             @include flexCenter(column);
+            @include web-max-width-ws();
         }
 
         #{&}__title{
@@ -125,7 +133,6 @@
 // responsive x-large screen
 @include media-xl{
     .navbar{
-
         #{&}__container{
             padding: 0 5rem;
         }

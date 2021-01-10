@@ -44,8 +44,6 @@ $padding: (
   "g-padding" : 0 2rem
 );
 
-$g-max-width: 80rem;
-
 // functions
 @function getFont($target){
     @return map-get($fonts, $target)
@@ -72,9 +70,12 @@ $g-max-width: 80rem;
     align-items: center;
 };
 @mixin web-max-width(){
-  max-width: $g-max-width;
+  max-width:  38rem;
 }
-  
+@mixin web-max-width-ws(){
+  max-width:  80rem;
+}
+
 // responsive css
 @mixin media-md{
   @media screen and (min-width: 768px){
