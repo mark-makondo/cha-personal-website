@@ -16,39 +16,33 @@
         margin: .125rem 0;
       }
     }
-
     #{&}__container{
       position: relative;
       width: 10rem;
     }
-
     #{&}__contents{
       position: absolute;
       right: 1rem;
       top: 0;
     }
-
     #{&}__li-hr{
       margin-top: .235rem;
       border-top: 2px solid;
       visibility: hidden;
       width: 0;
     }
-
     #{&}__lines{
       position: absolute;
       right: 1.25rem;
       top: 0;
       z-index: 1;
     }
-
     #{&}__circle{
       position: absolute;
       right: -1rem;
       top: -2rem;
       z-index: 0;
     }
-
     #{&}__logo{
       display: none;
     }
@@ -61,5 +55,4 @@
     #{&}__contents{
       display: none;
     }
-
   }

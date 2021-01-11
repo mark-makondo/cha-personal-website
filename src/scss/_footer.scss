@@ -8,19 +8,15 @@
         padding: 5rem 0;
         margin: auto;
     }
-
     #{&}__title{
         font-family: getFont(title-nav);
         font-size: getFontSize(footer);
         text-align: center;
     }
-
     #{&}__logo{
         width: 10rem;
         margin: 1rem 0;
      }
- 
-
     #{&}__contact{
         @include flexCenter(row);
         font-size: getFontSize(footer-icon);
@@ -29,14 +25,11 @@
             color: getFontColor(primary-color); 
             margin: 0 .5rem;
         }
-       
     }
-
     #{&}__copyright{
         font-family: getFont(title-nav);
         font-size: getFontSize(footer-copyright);
         text-align: center;
         margin-top: 1rem;
     }
- 
 }; 

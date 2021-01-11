@@ -13,19 +13,16 @@
                 margin: 0 .5rem;
             }
         }
-
         #{&}__contents{
             @include flexCenter(row);
             position: unset;
             left: unset;
             width: 100%;
         }
-
         #{&}__container{
             padding: getPadding(g-padding);
             width: unset;
         }
-
         // show logo
         #{&}__logo{
             display: unset;
@@ -35,7 +32,6 @@
             padding-left: 1rem;
             padding-top: 0.9375rem;
         }
-
         // remove mobile only icons
         #{&}__lines,
         #{&}__circle{
@@ -61,7 +57,6 @@
             @include flexCenter(column);
             @include web-max-width-ws();
         }
-
         #{&}__hair,
         #{&}__beauty-permanent,
         #{&}__eyebrows,
@@ -69,11 +64,9 @@
         #{&}__waxing{
             @include flexCenter(row);
         }
-
         #{&}__main-title{
             font-size: getFontSize(main-title-ws);
         }
-
         #{&}__info{
             @include flexCenter(column);
             align-items: flex-start;
@@ -87,7 +80,6 @@
                 font-size: getFontSize(featured-description-ws)
             }
         }
-
         #{&}__box{
             width: 50%;
             height: 20rem;
@@ -109,15 +101,12 @@
             @include flexCenter(column);
             @include web-max-width-ws();
         }
-
         #{&}__title{
             font-size: getFontSize(footer-ws);
         }
-        
         #{&}__logo{
             width: 10rem;;
         }
-
         #{&}__copyright{
             font-size: getFontSize(footer-copyright-ws);
         }
