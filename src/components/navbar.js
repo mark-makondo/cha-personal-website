@@ -11,7 +11,7 @@ const navbar = () => {
     return(
         <div className="navbar">
             <div className="navbar__container">
-                <div className="navbar__lines"><NavLines width="3rem" height="3rem"/></div>
+                <div className="navbar__lines"><NavLines width="48" height="48"/></div>
                 <div className="navbar__circle"><NavCircle /></div>
 
                 <div className="navbar__contents">

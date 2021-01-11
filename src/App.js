@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 // libraries
 
 // components
@@ -8,6 +8,11 @@ import Featured from './components/featured.js';
 import Footer from './components/footer.js';
 
 function App() {
+  
+  useEffect(() => {
+
+  }, []);
+
   return (
     <div className="App">
       <Navbar />
