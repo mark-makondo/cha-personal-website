@@ -1,17 +1,13 @@
-// initial
-import React from 'react';
-
 // libraries
 import gsap from 'gsap';
 
 const animations = () => {
 
     class animate{
-        contructor(selector, duration, isPaused, isReversed){
-            this.selector = selector;
+        constructor(target, duration, isPaused, isReversed){
+            this.selector = target;
 
-            this.master = gsap.timeline
-            ({
+            this.master = gsap.timeline({
                 paused: isPaused,
                 reversed: isReversed,
                 defaults: {
@@ -20,46 +16,48 @@ const animations = () => {
             })
         }
 
-        setElements(obj){
-            gsap.set( this.selector , obj );
+        setElements(target, obj){
+            gsap.set( target , obj );
         }
 
         setAnimation(target ,obj, label){
             this.master.to(target, obj, label);
-        }
-
-        attributeAnimate(attrObj, label){
-            this.master.to(this.selector, { setAttr: attrObj }, label);
             return this.master;
         }
+        
     }
 
     //#region variables-queries 
-        // queries
-        let navCircle = document.querySelector("#nav-circle"),
-            navLines = document.querySelector("#nav-lines");
+    // queries
+    let navCircle = document.querySelector("#nav-circle"),
+        navLines = document.querySelector("#nav-lines"),
+        navLineOne = document.querySelector("#nav-line-one"),
+        navLineTwo = document.querySelector("#nav-line-two"),
+        navLineThree = document.querySelector("#nav-line-three"),
+        navContents = document.querySelector(".navbar__contents"),
+        navContentsList = document.querySelectorAll(".navbar__contents ul li");
+       
+    // variables
+    let click = "click",
+        hover = "hover",
+        mouseenter = "mouseenter",
+        mouseleave = "mouseleave",
+        paused = true,
+        reversed = true;
 
-        // variables
-        let click = "click",
-            hover = "hover",
-            mouseenter = "mouseenter",
-            mouseleave = "mouseleave",
-            isPaused = true,
-            isReversed = true;
+    // custom
+    let attr__circleScaleUp, attr__linesScaleDown, attr__linesSuppresed, attr__linesSlantUp, attr__linesSlantDown,
+        navAnimation , navAnimate, label__nav, anim__moveRightDisplay, set__navContentList, anim__displayAlpha;
 
-        // custom
-        let navClickObj, navAnimate , nav ,
-            navAnimateClick, navClick;
     //#endregion
 
     // custom function
-    const eventListeners = (event, target, tween) => {
-        let event = event;
+    const eventListeners = (targetEvet, target, tween) => {
+        let event = targetEvet;
 
         if( event === click ){
             target.addEventListener(event, (e) =>{
                 e.preventDefault();
-                console.log("asdsadasd")
                 tween.reversed() ? tween.play() : tween.reverse();
             })
 
@@ -80,20 +78,37 @@ const animations = () => {
         }
     }
 
+    // section animations
     const navbarSection = () => {
-        // custom object 
-        navClickObj = { width: "162", height: "172" };
+        // custom object animations
+        label__nav = "navAnimate"
+        attr__circleScaleUp = { attr: { width: "162", height: "172"} };
+        attr__linesScaleDown = { attr: { width: "20", height: "30" } };
+        attr__linesSuppresed = { attr: { x2: "0%" } };
+        attr__linesSlantUp = { rotate:-45 ,attr: { x2: "100%" }, transformOrigin: "28% 0"};
+        attr__linesSlantDown = { rotate:45, attr: { x2: "100%" }, transformOrigin: "28% 0"};
+        anim__displayAlpha = { display: "unset", autoAlpha: 1};
+        set__navContentList =  { x:"-20" ,y:"-20", autoAlpha: 0 };
+        anim__moveRightDisplay = { autoAlpha: 1, x:"0", y:"0", stagger: .2};
         
         // nav animation
-        navAnimate = new animate( navCircle, 1, isPaused, isReversed );
-        nav = navAnimate.attributeAnimate( navClickObj );
-        
+        navAnimation = new animate( navCircle, .5, paused, reversed );
+        // scale down circle and lines
+        navAnimate = navAnimation.setAnimation( navCircle, attr__circleScaleUp, label__nav);
+        navAnimate = navAnimation.setAnimation( navLines, attr__linesScaleDown, label__nav);
+        // mid line 0
+        navAnimate = navAnimation.setAnimation( navLineTwo, attr__linesSuppresed, label__nav);
+        // cross
+        navAnimate = navAnimation.setAnimation( navLineOne, attr__linesSlantUp, label__nav);
+        navAnimate = navAnimation.setAnimation( navLineThree, attr__linesSlantDown, label__nav);
+        // show nav content and stagger
+        navAnimate = navAnimation.setAnimation( navContents, anim__displayAlpha, label__nav);
+        navAnimate = navAnimation.setElements( navContentsList, set__navContentList, label__nav);
+        navAnimate = navAnimation.setAnimation( navContentsList, anim__moveRightDisplay, label__nav);
+
         // event listener animation handler
-        eventListeners( click, navLines, nav );
-
-        
+        eventListeners( click, navLines, navAnimate );
     }
-
   
     return(
         navbarSection()

@@ -65,7 +65,7 @@ body .moving-nav {
 
 .navbar .navbar__contents {
   position: absolute;
-  right: 1rem;
+  right: 2rem;
   top: 0;
 }
 
@@ -85,8 +85,8 @@ body .moving-nav {
 
 .navbar .navbar__circle {
   position: absolute;
-  right: -1rem;
-  top: -2rem;
+  right: -1.5625rem;
+  top: -2.8125rem;
   z-index: 0;
 }
 

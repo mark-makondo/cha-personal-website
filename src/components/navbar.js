@@ -12,7 +12,7 @@ const navbar = () => {
         <div className="navbar">
             <div className="navbar__container">
                 <div className="navbar__lines"><NavLines width="48" height="48"/></div>
-                <div className="navbar__circle"><NavCircle /></div>
+                <div className="navbar__circle"><NavCircle width="114" height="108"/></div>
 
                 <div className="navbar__contents">
                     <div className="navbar__logo"><ChaBeautyLogo fill="#707070" width="100%"/></div>
