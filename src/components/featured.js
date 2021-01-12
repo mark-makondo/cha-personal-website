@@ -3,11 +3,11 @@ import React from 'react';
 const featured = () => {
 
     return(
-        <div className="featured">
+        <div className="featured" id="featured">
             <span className="featured__main-title">Featured Works</span>
 
-            <div className="featured__container featured--selector">
-                <div className="featured__hair">
+            <div className="featured__container">
+                <div className="featured__hair featured--selector">
                     <div className="featured__box"></div>
                     <div className="featured__info">
                         <span>Hair</span>

@@ -7,36 +7,43 @@ import {ReactComponent as NavCircle} from '../img/nav-circle.svg';
 import {ReactComponent as ChaBeautyLogo} from '../img/cha-beauty-logo.svg';
 
 const navbar = () => {
+    const navContents = () => {
+        return(
+            <ul>
+                <li>
+                    <div className="navbar__li-title">
+                        <a href="#header">Home</a>
+                    </div>
+                    <hr className="navbar__li-hr"/>
+                </li>
+                <li>
+                    <div className="navbar__li-title">
+                        <a href="#featured">Features</a>
+                    </div>
+                    <hr className="navbar__li-hr"/>
+                </li>
+                <li>
+                    <div className="navbar__li-title">
+                    <a href="#footer">Contact Me</a>
+                    </div>
+                    <hr className="navbar__li-hr"/>
+                </li>
+            </ul>
+        )
+    }
 
     return(
         <div className="navbar">
             <div className="navbar__container">
-                <div className="navbar__lines"><NavLines width="48" height="48"/></div>
-                <div className="navbar__circle"><NavCircle width="114" height="108"/></div>
+                <div className="navbar__contents-ws">
+                    <div className="navbar__logo"><ChaBeautyLogo fill="#707070" width="100%"/></div>
+                    {navContents()}
+                </div>
 
                 <div className="navbar__contents">
-                    <div className="navbar__logo"><ChaBeautyLogo fill="#707070" width="100%"/></div>
-                    <ul>
-                        <li>
-                            <div className="navbar__li-title">
-                                Home
-                            </div>
-                            <hr className="navbar__li-hr"/>
-                        </li>
-                        <li>
-                            <div className="navbar__li-title">
-                                Features
-                            </div>
-                            <hr className="navbar__li-hr"/>
-                        </li>
-                        <li>
-                            <div className="navbar__li-title">
-                                Contact Me
-                            </div>
-                            <hr className="navbar__li-hr"/>
-                        </li>
-                    </ul>
-
+                    <div className="navbar__lines"><NavLines width="48" height="48"/></div>
+                    <div className="navbar__circle"><NavCircle width="114" height="108"/></div>
+                    {navContents()}
                 </div>
             </div>
         </div>
