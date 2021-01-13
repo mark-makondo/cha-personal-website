@@ -6,7 +6,7 @@ import {ReactComponent as ChaBeautyLogo} from '../img/cha-beauty-logo.svg';
 const footer = () => {
 
     return(
-        <div className="footer" id="footer">
+        <div className="footer content" id="footer">
             <div className="footer__container">
                 <span className="footer__title">Do you want to see more?</span>
                 <div className="footer__logo">

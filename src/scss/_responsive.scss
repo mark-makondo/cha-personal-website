@@ -4,12 +4,7 @@
     .navbar{
         right: unset;
         width: 100%;
-        background-color: transparent;
-        transition: background-color .5s linear;
-
-        &.active{
-            background-color: black;
-        }
+        // background-color: transparent;
 
         #{&}__contents-ws{
 
@@ -97,7 +92,7 @@
             height: 20rem;
         }
 
-        div.featured__container div:nth-child(even){
+        .featured--selector:nth-child(even){
             .featured__box{
                 order: 2;
             }

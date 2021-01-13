@@ -6,7 +6,7 @@ import {ReactComponent as ChaBeautyLogo} from '../img/cha-beauty-logo.svg';
 const header = () => {
 
     return(
-        <div className="header" id="header">
+        <div className="header content" id="header">
             <div className="header__logo">
                 <ChaBeautyLogo fill="#707070" width="100%"/> 
             </div>

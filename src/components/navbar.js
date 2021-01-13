@@ -14,19 +14,19 @@ const navbar = () => {
                     <div className="navbar__li-title">
                         <a href="#header">Home</a>
                     </div>
-                    <hr className="navbar__li-hr"/>
+                    <hr className="hr-header navbar__li-hr" id="hr-header"/>
                 </li>
                 <li>
                     <div className="navbar__li-title">
                         <a href="#featured">Features</a>
                     </div>
-                    <hr className="navbar__li-hr"/>
+                    <hr className="hr-featured navbar__li-hr" id="hr-featured"/>
                 </li>
                 <li>
                     <div className="navbar__li-title">
                     <a href="#footer">Contact Me</a>
                     </div>
-                    <hr className="navbar__li-hr"/>
+                    <hr className="hr-footer navbar__li-hr" id="hr-footer"/>
                 </li>
             </ul>
         )

@@ -39,9 +39,7 @@
     }
     #{&}__li-hr{
       margin-top: .235rem;
-      border-top: 2px solid;
-      visibility: hidden;
-      width: 0;
+      border-top: 2px solid red; 
     }
     #{&}__lines{
       position: absolute;
@@ -57,15 +55,10 @@
 
       // scroll animation
       ellipse{
-        fill: #f8edede8;
-        transition: fill .5s linear;
-
-        &.active{
-          fill: black;
-        }
+        // fill: #f8edede8;
+        fill: none;
       }
     }
-
 
     // set for animation
     #{&}__li-hr{
