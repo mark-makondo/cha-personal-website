@@ -35,7 +35,9 @@ const animations = () => {
         // gsap array // alternative for queryselectorall for all browser compatibility 
         let navLinks = gsap.utils.toArray(".navbar__li-title a"),
             ws__navHr = gsap.utils.toArray(".navbar__contents-ws .navbar__li-hr"),
-            mobile__navHr = gsap.utils.toArray(".navbar__contents .navbar__li-hr");
+            mobile__navHr = gsap.utils.toArray(".navbar__contents .navbar__li-hr"),
+            featured__box = gsap.utils.toArray(".featured--selector .featured__box"),
+            featured__info = gsap.utils.toArray(".featured--selector .featured__info");
 
     //#endregion
    
@@ -178,16 +180,20 @@ const animations = () => {
 
     // reset animation here per new animation in responsiveAnimation() 
     const ws__resetAnimation  = () =>{
+        // reset back featured ws animation for mobile
         gsap.set( ".featured--selector .featured__box", { xPercent: 0, autoAlpha:1 });
-        gsap.set( ".featured--selector .featured__info", { xPercent: 0, autoAlpha:1 })
+        gsap.set( ".featured--selector .featured__info", { xPercent: 0, autoAlpha:1 });
+         // reset back nav icons and hr ws animation for mobile
         gsap.set( navCircleEllipse, {fill: "none" })
         gsap.set( mobile__navHr, {autoAlpha: 0, width: 0 })
     }
     const mobile__resetAnimation = () => {
-        gsap.set( ".featured--selector .featured__box", { xPercent: 0, autoAlpha:1 });
-        gsap.set( ".featured--selector .featured__info", { xPercent: 0, autoAlpha:1 })
+        // reset back nav link and hr mobile animation for ws
         gsap.set( navbar, {background: "transparent" })
-        gsap.set( ws__navHr, {autoAlpha: 0, width: 0 })
+        gsap.set( ws__navHr, {autoAlpha: 0, width: 0 });
+        // reset back featured mobile animation for ws
+        gsap.set(".featured--selector .featured__box", { scale: 1, autoAlpha: 1} );
+        gsap.set(".featured--selector .featured__info", { autoAlpha: 1} );
     }
 
     // section animations
@@ -272,7 +278,17 @@ const animations = () => {
                     ScrollTrigger.create(scrollTriggerObj)
 
                 }else if(type === "featured-mobile"){
-                    //  tomorrow task: scale the image plus auto alpha and auto alpha the sub title 
+                    let duration = .5;
+                    let box__setScale = 0, box__setAlpha = 0, box__scale = 1, box__alpha = 1;
+                    let info__setAlpha = 0, info__alpha = 1;
+                    let label = "featured__mobile"
+
+                    gsap.set(featured__box[i], { scale: box__setScale, autoAlpha: box__setAlpha} );
+                    gsap.set(featured__info[i], { autoAlpha: info__setAlpha} );
+
+                    tl.to(featured__box[i], { duration: duration, scale: box__scale, autoAlpha: box__alpha }, label )
+                      .to(featured__info[i], { duration: duration, autoAlpha: info__alpha }, label );
+
                     ScrollTrigger.create(scrollTriggerObj)
 
                 }else if(type === "navlink-ws"){
