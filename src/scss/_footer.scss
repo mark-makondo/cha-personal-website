@@ -1,5 +1,6 @@
 // footer
 .footer{
+    padding: 0 2rem;
 
     #{&}__container{
         @include flexCenter(column);
@@ -12,6 +13,7 @@
         font-family: getFont(title-nav);
         font-size: getFontSize(footer);
         text-align: center;
+        font-weight: bold;
     }
     #{&}__logo{
         width: 10rem;

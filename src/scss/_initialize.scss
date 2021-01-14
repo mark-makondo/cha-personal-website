@@ -12,13 +12,13 @@ ul{
 body{
   color: map-get($font-colors, primary-color );
   background-color: map-get($bg-colors, primary-color );
-  .header,
-  .featured,
-  .footer{
-    padding: getPadding(g-padding)
-  }
+
   .featured,
   .moving-nav{
     background-color: map-get($bg-colors, secondary-color );
+  }
+  img{
+    width: 100%;
+    height: 100%;
   }
 }

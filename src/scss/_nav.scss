@@ -15,6 +15,7 @@
     #{&}__container{
       position: relative;
       width: 100%;
+      padding: 0 2rem;
     }
     #{&}__contents{
       position: absolute;
@@ -55,7 +56,6 @@
 
       // scroll animation
       ellipse{
-        // fill: #f8edede8;
         fill: none;
       }
     }

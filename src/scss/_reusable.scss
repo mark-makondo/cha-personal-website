@@ -13,24 +13,29 @@ $font-size: (
   // nav
   "nav": 18px,
   "nav-ws": 20px,
+  "nav-lg": 25px,
   // header
-  "header-description":  30px,
-  "header-description-ws":  40px,
+  "header-description":  20px,
+  "header-description-ws":  30px,
+  "header-description-lg": 35px,
   // featured
-  "main-title": 40px,
-  "sub-title": 30px,
+  "f-title": 30px,
+  "f-sub-title": 20px,
   "main-title-ws": 55px,
   "sub-title-ws": 40px,
   "featured-description-ws": 30px,
+  "f-title-lg": 70px,
+  "f-sub-title-lg": 50px,
+  "f-desc-lg": 35px,
   // footer        
-  "footer": 40px,
+  "footer": 35px,
   "footer-copyright": 20px,
   "footer-icon": 48px,
   "footer-ws": 55px,
   "footer-copyright-ws": 30px,
-  "footer-icon-ws": 48px
- 
-
+  "footer-icon-ws": 48px,
+  "footer-title-lg": 70px,
+  "footer-cpr-lg":35px,
 );
 $bg-colors: (
   "primary-color": #F5E6E6,
@@ -42,6 +47,15 @@ $font-colors: (
 );
 $padding: (
   "g-padding" : 0 2rem
+);
+$image-size: (
+  "header-mobile": 180px,
+  "featured-mobile": 250px,
+  "header-md": 200px,
+  "featured-md": 400px,
+  "header-lg-w": 380px,
+  "header-lg-h": 510px,
+  "featured-lg": 450px,
 );
 
 // functions
@@ -60,6 +74,9 @@ $padding: (
 @function getPadding($target){
     @return map-get($padding, $target)
 };
+@function getImageSize($target){
+  @return map-get($image-size, $target)
+};
 
 // reusable css
 @mixin flexCenter($direction){
@@ -74,15 +91,19 @@ $padding: (
 @mixin web-max-width-ws(){
   max-width:  80rem;
 }
+@mixin web-max-width-lg(){
+  max-width:  75rem;
+}
+
 
 // responsive css
 @mixin media-md{
-  @media screen and (min-width: 800px){
+  @media screen and (min-width: 768px){
     @content;
   }
 };
 @mixin media-lg{
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 1200px){
     @content;
   }
 };

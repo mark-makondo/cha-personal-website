@@ -1,17 +1,33 @@
 // header
 .header{
+  padding: 0 2rem;
+
   @include flexCenter(column);
   height: 100vh;
 
+  #{&}__info{
+    @include flexCenter(column);
+  }
   #{&}__logo{
     max-width: 25rem;
   }
   p{
     @include web-max-width();
     
-    margin-top: 1rem;
+    margin: 1rem 0;
     font-family: getFont(description);
     font-size: getFontSize(header-description);
     text-indent: 10px;
+  }
+
+  #{&}__pic{
+    margin-top: 1rem;
+    width: getImageSize(header-mobile);
+    height: getImageSize(header-mobile);
+    mix-blend-mode: luminosity;
+
+    img{
+      border-radius: 50%;
+    }
   }
 };

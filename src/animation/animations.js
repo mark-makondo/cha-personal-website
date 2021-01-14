@@ -149,7 +149,7 @@ const animations = () => {
         ScrollTrigger.matchMedia({
             
             // desktop
-            "(min-width: 800px)": function() {
+            "(min-width: 769px)": function() {
                 navChangeColorOnScroll(navbar);
                 scrollTriggerArray(".featured--selector", "center 60%", "center 10%", false, "featured-ws");
                 scrollTriggerArray(".content", "top 80%", "bottom 80%", false, "navlink-ws");
@@ -160,7 +160,7 @@ const animations = () => {
             },
 
             // mobile
-            "(max-width: 799px)": function() {
+            "(max-width: 768px)": function() {
                 navChangeColorOnScroll(navCircleEllipse);
                 scrollTriggerArray(".featured--selector", "center 60%", "center 20%", false, "featured-mobile");
                 scrollTriggerArray(".content", "top 80%", "bottom 80%", false, "navlink-mobile");
@@ -336,7 +336,7 @@ const animations = () => {
                     let query = document.querySelector(href);
                     let topY = query.offsetTop;
 
-                    gsap.to(window, {duration: 5, scrollTo:topY, overwrite: "all", ease:"Power3.easeOut"});
+                    gsap.to(window, {duration: 1, scrollTo:topY, overwrite: "all", ease:"Power3.easeOut"});
                 })
             })
         }
