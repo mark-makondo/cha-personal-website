@@ -13,9 +13,14 @@ body{
   color: map-get($font-colors, primary-color );
   background-color: map-get($bg-colors, primary-color );
 
-  .featured,
-  .moving-nav{
-    background-color: map-get($bg-colors, secondary-color );
+  .header{
+    background-color: getBgColor(header-bg);
+  }
+  .featured {
+    background-color: getBgColor(featured-bg);
+  }
+  .footer{
+    background-color: getBgColor(footer-bg);
   }
   img{
     width: 100%;

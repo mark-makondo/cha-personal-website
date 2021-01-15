@@ -1,6 +1,7 @@
 // footer
 .footer{
     padding: 0 2rem;
+    color: getFontColor(footer-color); 
 
     #{&}__container{
         @include flexCenter(column);
@@ -18,18 +19,23 @@
     #{&}__logo{
         width: 10rem;
         margin: 1rem 0;
+
+        svg{
+            fill: getFontColor(footer-color); 
+        }
      }
     #{&}__contact{
         @include flexCenter(row);
         font-size: getFontSize(footer-icon);
 
         i{
-            color: getFontColor(primary-color); 
+            color: getFontColor(footer-color); 
             margin: 0 .5rem;
         }
     }
     #{&}__copyright{
         font-family: getFont(title-nav);
+        color: getFontColor(footer-color); 
         font-size: getFontSize(footer-copyright);
         text-align: center;
         margin-top: 1rem;

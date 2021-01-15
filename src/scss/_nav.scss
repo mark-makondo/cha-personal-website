@@ -9,7 +9,7 @@
 
     ul li a{
       text-decoration: none;
-      color: #707070;
+      color: getFontColor(nav-color);
     }
     
     #{&}__container{
@@ -28,9 +28,9 @@
         flex-direction: column;
         align-items: flex-start;
         font-size: getFontSize(nav);
-        right: -30px;
         width: 7rem;
-        top: -20px;
+        right: 0;
+        top: -15px
 
           li{
             display: none;
@@ -40,13 +40,19 @@
     }
     #{&}__li-hr{
       margin-top: .235rem;
-      border-top: 2px solid red; 
+      border-width: 1px;
+      border-style: solid;
+      border-color: #463333;
     }
     #{&}__lines{
       position: absolute;
       right: -0.9375rem;
       top: -1.25rem;
       z-index: 1;
+
+      line{
+        stroke: #463333;
+      }
     }
     #{&}__circle{
       position: absolute;
@@ -56,7 +62,7 @@
 
       // scroll animation
       ellipse{
-        fill: none;
+        fill: getBgColor(header-bg);
       }
     }
 

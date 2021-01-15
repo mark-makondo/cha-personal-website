@@ -2,8 +2,13 @@
 .header{
   padding: 0 2rem;
 
-  @include flexCenter(column);
+
   height: 100vh;
+
+  #{&}__container{
+    @include flexCenter(column);
+    height: 100%;
+  }
 
   #{&}__info{
     @include flexCenter(column);

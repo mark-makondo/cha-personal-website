@@ -34,6 +34,10 @@
             width: 10rem;
             margin-right: auto;
             padding-top: 10px;
+
+            svg{
+                fill: getFontColor(nav-color);
+            }
         }
 
         // mobile only contents
@@ -77,7 +81,6 @@
             font-size: getFontSize(main-title-ws);
         }
         #{&}__info{
-            @include flexCenter(column);
             align-items: flex-start;
             width: 50%;
 
@@ -149,9 +152,12 @@
 
     // header
     .header{
-        @include flexCenter(row);
-        @include web-max-width-lg();
-        margin: 0 auto;
+        
+        #{&}__container{
+            @include flexCenter(row);
+            @include web-max-width-lg();
+            margin: 0 auto;
+        }
 
         #{&}__pic{
             width: getImageSize(header-lg-w);

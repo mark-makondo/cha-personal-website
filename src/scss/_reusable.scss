@@ -39,11 +39,16 @@ $font-size: (
 );
 $bg-colors: (
   "primary-color": #F5E6E6,
-  "secondary-color": #F8EDED
+  "secondary-color": #F8EDED,
+  "footer-bg": #463333,
+  "header-bg": #EBD4D4,
+  "featured-bg": #FFF0F0
 );
 $font-colors: (
-  "primary-color": #707070,
-  "secondary-color": #070404
+  "primary-color": rgb(155, 129, 129),
+  "secondary-color": #070404,
+  "nav-color": #463333,
+  "footer-color": #EBD4D4
 );
 $padding: (
   "g-padding" : 0 2rem

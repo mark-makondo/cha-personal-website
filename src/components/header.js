@@ -9,18 +9,21 @@ const header = () => {
 
     return(
         <div className="header content" id="header">
-            <div className="header__info">
-                <div className="header__logo">
-                    <ChaBeautyLogo fill="#707070" width="100%"/> 
+            <div className="header__container">
+                <div className="header__info">
+                    <div className="header__logo">
+                        <ChaBeautyLogo fill="#707070" width="100%"/> 
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et dolor enim necessitatibus recusandae. Voluptates beatae, facilis dignissimos nam amet nostrum, dolorem quas reiciendis iure magnam, accusamus debitis voluptatum quam et.
+                    </p>
                 </div>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et dolor enim necessitatibus recusandae. Voluptates beatae, facilis dignissimos nam amet nostrum, dolorem quas reiciendis iure magnam, accusamus debitis voluptatum quam et.
-                </p>
+            
+                <div className="header__pic">
+                    <img src={HeaderPic} alt= "profile"/>
+                </div>
             </div>
-         
-            <div className="header__pic">
-                <img src={HeaderPic} alt= "Main Picture"/>
-            </div>
+           
 
         </div>
     )

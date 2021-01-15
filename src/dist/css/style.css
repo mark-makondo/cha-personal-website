@@ -15,13 +15,20 @@ ul li {
 }
 
 body {
-  color: #707070;
+  color: #9b8181;
   background-color: #F5E6E6;
 }
 
-body .featured,
-body .moving-nav {
-  background-color: #F8EDED;
+body .header {
+  background-color: #EBD4D4;
+}
+
+body .featured {
+  background-color: #FFF0F0;
+}
+
+body .footer {
+  background-color: #463333;
 }
 
 body img {
@@ -53,7 +60,7 @@ body img {
 
 .navbar ul li a {
   text-decoration: none;
-  color: #707070;
+  color: #463333;
 }
 
 .navbar .navbar__container {
@@ -81,19 +88,18 @@ body img {
       -ms-flex-align: start;
           align-items: flex-start;
   font-size: 18px;
-  right: -30px;
   width: 7rem;
-  top: -20px;
-}
-
-.navbar .navbar__contents ul li {
-  display: none;
-  margin: .125rem 0;
+  right: 0;
+  top: -15px li;
+  top-display: none;
+  top-margin: .125rem 0;
 }
 
 .navbar .navbar__li-hr {
   margin-top: .235rem;
-  border-top: 2px solid red;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #463333;
 }
 
 .navbar .navbar__lines {
@@ -101,6 +107,10 @@ body img {
   right: -0.9375rem;
   top: -1.25rem;
   z-index: 1;
+}
+
+.navbar .navbar__lines line {
+  stroke: #463333;
 }
 
 .navbar .navbar__circle {
@@ -111,7 +121,7 @@ body img {
 }
 
 .navbar .navbar__circle ellipse {
-  fill: none;
+  fill: #EBD4D4;
 }
 
 .navbar .navbar__li-hr {
@@ -129,6 +139,10 @@ body img {
 
 .header {
   padding: 0 2rem;
+  height: 100vh;
+}
+
+.header .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,7 +156,7 @@ body img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .header .header__info {
@@ -246,11 +260,25 @@ body img {
 .featured .featured__main-title {
   font-family: "Itim", cursive;
   font-size: 30px;
+  font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .featured .featured__info {
   padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .featured .featured__info span {
@@ -260,7 +288,6 @@ body img {
 }
 
 .featured .featured__info p {
-  display: none;
   font-family: "Caveat", cursive;
   text-indent: 20px;
 }
@@ -277,6 +304,7 @@ body img {
 
 .footer {
   padding: 0 2rem;
+  color: #EBD4D4;
 }
 
 .footer .footer__container {
@@ -310,6 +338,10 @@ body img {
   margin: 1rem 0;
 }
 
+.footer .footer__logo svg {
+  fill: #EBD4D4;
+}
+
 .footer .footer__contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -328,12 +360,13 @@ body img {
 }
 
 .footer .footer__contact i {
-  color: #707070;
+  color: #EBD4D4;
   margin: 0 .5rem;
 }
 
 .footer .footer__copyright {
   font-family: "Itim", cursive;
+  color: #EBD4D4;
   font-size: 20px;
   text-align: center;
   margin-top: 1rem;
@@ -392,6 +425,9 @@ body img {
     margin-right: auto;
     padding-top: 10px;
   }
+  .navbar .navbar__logo svg {
+    fill: #463333;
+  }
   .navbar .navbar__lines,
   .navbar .navbar__circle {
     display: none;
@@ -446,19 +482,6 @@ body img {
     font-size: 55px;
   }
   .featured .featured__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -524,7 +547,7 @@ body img {
   .navbar .navbar__container {
     max-width: 75rem;
   }
-  .header {
+  .header .header__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

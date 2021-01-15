@@ -24,17 +24,20 @@
     #{&}__main-title{
         font-family: getFont(title-nav);
         font-size: getFontSize(f-title);
+        font-weight: bold;
         margin-bottom: 1rem;
     }
     #{&}__info{
         padding: 1rem;
+        @include flexCenter(column);
+
         span{
             font-family: getFont(description);
             font-size: getFontSize(f-sub-title);
             font-weight: bold;
         }
         p{
-            display: none;
+            // display: none;
             font-family: getFont(description);
             text-indent: 20px;
         }
