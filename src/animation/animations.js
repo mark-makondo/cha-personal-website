@@ -184,6 +184,7 @@ const animations = () => {
         gsap.set( ".featured--selector .featured__box", { xPercent: 0, autoAlpha:1 });
         gsap.set( ".featured--selector .featured__info", { xPercent: 0, autoAlpha:1 });
         // reset back nav color
+        gsap.set(".navbar .navbar__contents .navbar__li-hr", { borderStyle: "solid", borderWidth: "1px"} );
         gsap.set(".navbar .navbar__contents .navbar__lines line", { stroke: "#463333"})
         // reset back nav icons and hr ws animation for mobile
         gsap.set( navCircleEllipse, {fill: "#ebd4d4" })
@@ -191,14 +192,16 @@ const animations = () => {
     }
     const mobile__resetAnimation = () => {
         // reset back nav link and hr mobile animation for ws
-        gsap.set( navbar, {background: "transparent" })
+        gsap.set( navbar, {background: "transparent" });
         gsap.set( ws__navHr, {autoAlpha: 0, width: 0 });
+        gsap.set(".navbar .navbar__contents-ws .navbar__li-hr", { borderStyle: "solid", borderWidth: "1px"} );
         // reset back nav color
         gsap.set(".navbar .navbar__contents-ws ul li a", { color: "#463333"})
         gsap.set(".navbar .navbar__logo svg", { fill: "#463333"})
         // reset back featured mobile animation for ws
         gsap.set(".featured--selector .featured__box", { scale: 1, autoAlpha: 1} );
         gsap.set(".featured--selector .featured__info", { autoAlpha: 1} );
+      
     }
 
     // section animations
