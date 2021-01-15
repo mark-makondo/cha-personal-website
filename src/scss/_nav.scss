@@ -30,19 +30,20 @@
         font-size: getFontSize(nav);
         width: 7rem;
         right: 0;
-        top: -15px
+        top: -15px;
 
-          li{
+          li:nth-child(2){
             display: none;
-            margin: .125rem 0;
+            margin: 8px 0;
           }
       } 
     }
     #{&}__li-hr{
-      margin-top: .235rem;
+      margin: 0px auto;
       border-width: 1px;
       border-style: solid;
       border-color: #463333;
+      padding: 0;
     }
     #{&}__lines{
       position: absolute;
@@ -69,7 +70,6 @@
     // set for animation
     #{&}__li-hr{
       visibility: hidden;
-      width: 0;
     }
 
     // ws only contents

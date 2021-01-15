@@ -90,16 +90,20 @@ body img {
   font-size: 18px;
   width: 7rem;
   right: 0;
-  top: -15px li;
-  top-display: none;
-  top-margin: .125rem 0;
+  top: -15px;
+}
+
+.navbar .navbar__contents ul li:nth-child(2) {
+  display: none;
+  margin: 8px 0;
 }
 
 .navbar .navbar__li-hr {
-  margin-top: .235rem;
+  margin: 0px auto;
   border-width: 1px;
   border-style: solid;
   border-color: #463333;
+  padding: 0;
 }
 
 .navbar .navbar__lines {
@@ -126,7 +130,6 @@ body img {
 
 .navbar .navbar__li-hr {
   visibility: hidden;
-  width: 0;
 }
 
 .navbar .navbar__contents-ws {
