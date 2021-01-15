@@ -100,9 +100,7 @@ body img {
 
 .navbar .navbar__li-hr {
   margin: 0px auto;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #463333;
+  border-top: 1px solid #463333;
   padding: 0;
 }
 
