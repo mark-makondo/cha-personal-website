@@ -172,7 +172,7 @@ const animations = () => {
             // all 
             "all": function() {
                 scrollTriggerArray(".header", "top 10%", "80% 10%", false, "h-active", "header-all");
-                scrollTriggerArray(".featured","top 20%", "80% 20%", true, "f-title-active", "featured-title-all");
+                scrollTriggerArray(".featured","top 20%", "80% 20%", false, "f-title-active", "featured-title-all");
 
                 navbarSmoothScroll();
                 sectionAnimations();
